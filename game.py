@@ -1,4 +1,5 @@
 import random
+
 # Lista de palabras posibles
 words = ["python", "programación", "computadora", "código", "desarrollo",
 "inteligencia"]
@@ -13,10 +14,25 @@ fails = 0
 guessed_letters = []
 
 print("¡Bienvenido al juego de adivinanzas!")
-print("Estoy pensando en una palabra. ¿Puedes adivinar cuál es?")
 
-word_displayed = "_" * len(secret_word)
+while True:
+    difficulties=input("Elige la dificultad del juego (Facil - Media - Dificil):").lower()
+    match difficulties:
+        case "facil":
+            word_displayed = "".join(letter if letter in "aeiouáéíóú" else "_" for letter in secret_word)
+            break
+        case "media":
+            word_displayed = secret_word[0] + "_" * (len(secret_word) - 2) + secret_word[-1]
+            break
+        case "dificil":
+            word_displayed = "_" * len(secret_word)
+            break
+        case _:
+            print("Opcion no valida. Intenta de nuevo")
+
+
 # Mostrarla palabra parcialmente adivinada
+print("Estoy pensando en una palabra. ¿Puedes adivinar cuál es?")
 print(f"Palabra: {word_displayed}")
 
 
@@ -63,4 +79,4 @@ else:
      print(f"¡Oh no! Has alcanzado el maximo de fallos que era {max_fails}.")
      print(f"La palabra secreta era: {secret_word}")
      
-input()
+input() # Para poder ver las cosas sin que se cierre la terminal
