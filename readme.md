@@ -1,11 +1,13 @@
 # Entregas del Seminario de Python
 
 ### Alumno:
-**Nombre:** Ivan Ceballos
-**Numero de** legajo: 21477/4
+-**Nombre:** Ivan Ceballos
+-**Numero de legajo:** 21477/4
 
 ### Descripcion:
 Las entregas de los trabajos practicos se ubicaran en las carpetas segun correspondan.
+-Trabajo 1 entregado
+-Trabajo 2 entregado
 
 ### Instalacion en modo desarrollo
 Para instalar este proyecto.
